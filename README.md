@@ -1,52 +1,56 @@
-# Registration Automation Project
+# Intelligent Registration System with Selenium Automation
 
 ## Project Overview
-This project is an Intelligent Registration System developed using HTML, CSS, and JavaScript with Selenium automation testing. The main objective of this project is to validate a user registration form using client-side validations and automate both negative and positive test scenarios.
+The Intelligent Registration System is a web-based application designed to collect user information through a structured and validated registration form. The system focuses on providing a clean user interface, real-time client-side validations, password strength checking, and dynamic dropdown behavior for country, state, and city selection.
 
-The project demonstrates form validation logic, dynamic dropdown behavior, and automation testing using Selenium WebDriver with screenshot capture.
+The project also includes automation testing using Selenium WebDriver to validate form behavior under different scenarios. Both negative and positive test cases are automated to ensure the reliability and correctness of the registration process.
 
 ---
 
-## Project Folder Structure
-
-registration-automation/
-│
-├── index.html        → Registration form UI
-├── style.css         → Styling and layout of the form
-├── script.js         → Client-side validation and dynamic logic
-├── registration-automation/
-│   └── Selenium automation test files (Positive & Negative scenarios)
-├── pom.xml           → Maven configuration for Selenium automation
-└── README.md         → Project documentation
+## Key Features
+- User-friendly registration form with mandatory field validation
+- Client-side validation to prevent incorrect data submission
+- Dynamic Country–State–City dropdown functionality
+- Password strength indicator (Weak / Medium / Strong)
+- Submit button disabled until all required fields are valid
+- Inline error messages and clear success alerts
+- Selenium automation for positive and negative scenarios
+- Automatic screenshot capture during test execution
 
 ---
 
 ## Technologies Used
-- HTML5  
-- CSS3  
-- JavaScript  
-- Selenium WebDriver  
-- Java  
-- Maven  
-- Eclipse IDE  
-- Chrome Browser  
+HTML5, CSS3, JavaScript, Java, Selenium WebDriver, Maven, JUnit, ChromeDriver
 
 ---
 
-## Features Implemented
-- Mandatory field validations
-- Submit button disabled until required fields are valid
-- Email validation (blocks disposable domains like tempmail)
-- Password strength indicator (Weak / Medium / Strong)
-- Dynamic Country → State → City dropdowns
-- Clear error and success messages
-- Screenshot capture during automation execution
+## Project Folder Structure
+```txt
+registration-automation/
+├── index.html                     # Registration form UI
+├── style.css                      # Styling and responsive layout of the form
+├── script.js                      # Client-side validation, password strength logic,
+│                                  # and dynamic Country–State–City dropdown handling
+│
+├── src/
+│   ├── main/
+│   │   └── java/                  # Application setup (if required)
+│   │
+│   └── test/
+│       └── java/
+│           └── com/
+│               └── frugaltesting/
+│                   └── tests/
+│                       ├── RegistrationNegativeTest.java
+│                       ├── RegistrationPositiveTest.java
+│                       └── RegistrationValidationTest.java
+│
+├── pom.xml                        # Maven configuration for Selenium WebDriver,
+│                                  # dependencies, and test execution
+├── error-state.png                # Screenshot captured for negative test scenario
+├── success-state.png              # Screenshot captured for positive test scenario
+└── README.md                      # Project documentation
 
----
-
-## Automation Testing Details
-
-Automation is implemented using Selenium WebDriver with Maven.
 
 ### Negative Scenario
 - Mandatory field (Last Name) is skipped
@@ -70,7 +74,7 @@ Automation is implemented using Selenium WebDriver with Maven.
 2. Fill the registration form
 3. Observe validation behavior and messages
 
-### Selenium Automation
+## Selenium Automation
 1. Open the project in Eclipse IDE
 2. Update Maven dependencies
 3. Run the Selenium test classes as JUnit Test
